@@ -1,0 +1,23 @@
+@use "../base/variable" as *;
+@use "../mixins.scss" as *;
+
+.nav{
+    grid-column: 6 / -1;
+    grid-row: 1 / 2;
+    padding-top: 2rem;
+    &-lista{
+        @include flex(row, space-evenly);
+    }
+    &-item{
+        list-style-type: none;
+    }
+    &-link{
+        text-decoration: none;
+        font-size: size(lg);
+        color: color(primary);
+
+        &:hover{
+            color: color(quaternary);
+        }
+    }
+}

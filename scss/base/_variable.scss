@@ -1,0 +1,39 @@
+/*fuentes*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+/// paleta de colores
+/// @group colores
+$color:(
+    primary: #333,
+    secondary: #8b8b8b,
+    tertiary: #f2f0f1,
+    quaternary: #43ed00,
+    alt: #005fb3
+);
+
+/// Función que devuelve un color del vector de colores
+/// @group colores
+/// @param {string} $color-name --nombre color del vector colores
+/// @return {color}
+/// @example background-color: color(primary);
+@function color ($color-name){
+    @return map-get($color, $color-name);
+}
+/// tamaño de fuentes
+/// @group fuentes
+$font-sizes:(
+    xx1:6rem,
+    x2:4.5rem,
+    x1:3rem,
+    lg:2.5rem,
+    md:2rem,
+    sm:1.8rem,
+    xs:1.6rem
+);
+/// Función que devuelve una una fuente del vector fuentes
+/// @parameter {string} $size --nombre fuente del vector fuentes
+/// @return {color}
+/// @example font-size: size(xs);
+@function size($size){
+    @return map-get($font-sizes, $size);
+}
